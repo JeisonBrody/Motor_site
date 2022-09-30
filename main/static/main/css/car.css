@@ -1,0 +1,15 @@
+body{
+    display:flex;
+    justify-content: center;
+    font-family: Impact;
+}
+.car-wrp{
+    flex-wrap:wrap;
+    display: flex;
+    width: 50%;
+    color: #ffffff;
+}
+.success {
+    width: 20%;
+    height: 70px;
+}

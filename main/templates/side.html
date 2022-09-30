@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor</title>
+    <link rel="stylesheet" href="{% static 'main/css/side.css' %}">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="wrapper">
+
+            <a href="{% url 'home' %}">
+                <div class="logo">
+                    <span>
+                        <img src="{% static 'main/images/motor1.svg.png' %}" alt="logo" width="40px">
+                    </span>
+                </div>
+            </a>
+
+            <a href="{% url 'car' %}">
+                <div class="links">
+                    <div class="link">
+                        <ion-icon name="car-sport"></ion-icon>
+                        <span>Car</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="links">
+                <div class="link">
+                    <ion-icon name="settings"></ion-icon>
+                    <span>Engine</span>
+                </div>
+            </div>
+
+            <div class="links">
+                <div class="link">
+                    <ion-icon name="person"></ion-icon>
+                    <span>Sign in</span>
+                </div>
+            </div>
+
+            <a href="{% url 'about' %}">
+                <div class="divider"></div>
+                <div class="links">
+                    <div class="link">
+                        <ion-icon name="at-circle"></ion-icon>
+                        <span>Contact Us</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </nav>
+</body>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>
