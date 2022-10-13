@@ -1,79 +1,66 @@
+{% extends 'side.html' %}
 {% load static %}
-{% include 'side.html' %}
-<!DOCTYPE html>
-<html lang='ru'>
-	<head>
-		<title>Title</title>
+{% block link %}
+    <link href="{% static 'main/css/about.css' %}" rel='stylesheet'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css'>
+{% endblock link %}
 
-		<meta charset='UTF-8'>
-		<meta name='viewport' content='width=device-width, initial-scale=1'>
+{% block header %}
+    <main>
+        <div class='content'>
+            <div class='row'>
+                <a
+                    href='https://t.me/Jei_B'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    class="first"
+                >
+                    <img
+                        src="{% static 'main/images/telegram_icon.svg.png' %}"
+                        alt='Telegram'
+                        width='200px'
+                        class='hover'
+                    >
+                </a>
 
-		<link href="{% static 'main/css/about.css' %}" rel='stylesheet'>
+                <a
+                    href='https://vk.com'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    class="first"
+                >
+                    <img
+                        src="{% static 'main/images/vk_ico.svg.png' %}"
+                        alt='vk'
+                        width='200px'
+                        class='hover'
+                    >
+                </a>
+            </div>
 
-		<link
-			rel='stylesheet'
-			href='https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css'
-		>
-	</head>
-	<body>
+            <div class='row second'>
+                <div class='welcome'>
+                    CONTACT US
+                </div>
+            </div>
 
-		<main>
-			<div class='content'>
-				<div class='row'>
-					<a
-						href='https://t.me/Jei_B'
-						target='_blank'
-						rel='noopener noreferrer'
-                        class="first"
-					>
-						<img
-							src="{% static 'main/images/telegram_icon.svg.png' %}"
-							alt='Telegram'
-							width='200px'
-							class='hover'
-						>
-					</a>
+            <div class='row'>
 
-					<a
-						href='https://vk.com'
-						target='_blank'
-						rel='noopener noreferrer'
-                        class="first"
-					>
-						<img
-							src="{% static 'main/images/vk_ico.svg.png' %}"
-							alt='vk'
-							width='200px'
-							class='hover'
-						>
-					</a>
-				</div>
+                <a
+                    href='https://github.com/JeisonBrody'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    class="drive"
+                >
+                    <img
+                        src="{% static 'main/images/github.svg.png' %}"
+                        alt='GitHub'
+                        width='200px'
+                        class='hover'
+                    >
+                </a>
 
-				<div class='row second'>
-					<div class='welcome'>
-						CONTACT US
-					</div>
-				</div>
-
-				<div class='row'>
-
-					<a
-						href='https://github.com/JeisonBrody'
-						target='_blank'
-						rel='noopener noreferrer'
-                        class="drive"
-					>
-						<img
-							src="{% static 'main/images/github.svg.png' %}"
-							alt='GitHub'
-							width='200px'
-							class='hover'
-						>
-					</a>
-
-				</div>
-			</div>
-		</main>
-
-	</body>
-</html>
+            </div>
+        </div>
+    </main>
+{% endblock header %}

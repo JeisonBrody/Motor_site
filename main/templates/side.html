@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motor</title>
     <link rel="stylesheet" href="{% static 'main/css/side.css' %}">
+    {% block link %}{% endblock link %}
 </head>
 <body>
-
+    {% block header %}{% endblock header %}
     <nav class="sidebar">
         <div class="wrapper">
 
@@ -31,19 +32,14 @@
                 </div>
             </a>
 
-            <div class="links">
-                <div class="link">
-                    <ion-icon name="settings"></ion-icon>
-                    <span>Engine</span>
+            <a href="{% url 'login' %}">
+                <div class="links">
+                    <div class="link">
+                        <ion-icon name="person"></ion-icon>
+                        <span>Sign in</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="links">
-                <div class="link">
-                    <ion-icon name="person"></ion-icon>
-                    <span>Sign in</span>
-                </div>
-            </div>
+            </a>
 
             <a href="{% url 'about' %}">
                 <div class="divider"></div>

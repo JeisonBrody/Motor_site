@@ -3,7 +3,7 @@ from django.db import models
 
 class Car(models.Model):
     brand_car = models.CharField(max_length=50, verbose_name="Марка авто")
-    brand_image = models.ImageField(upload_to='photos/car', verbose_name="Изображение авто", blank=True)
+    brand_image = models.ImageField(upload_to='photos/car', verbose_name="Изображение авто", blank=True, default="photos/car/error_img.jpg")
 
     def __str__(self):
         return self.brand_car

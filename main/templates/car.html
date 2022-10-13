@@ -1,24 +1,22 @@
-{% include 'side.html' %}
+{% extends 'side.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+{% block link %}
     <link rel="stylesheet" href="{% static 'main/css/car.css' %}">
-</head>
+{% endblock link %}
 
-<body>
+{% block header %}
     <div class="car-wrp">
-        {% for el in car%}
-        <div class='success'>
-            <td>{{ el.brand_car }}</td>
-            {% if el.brand_image %}
-                <img src='{{ el.brand_image.url }}'>
-            {% endif %}
-        </div>
-        {% endfor %}
-    </div>
-</body>
+        <h1 class="main-title">Двигатели</h1>
 
-</html>
+        {% for el in car%}
+        <ul>
+            <li style="--clr: #00c3ff;">
+                <a href={{ el.brand_car|lower }} data-text="&nbsp;{{ el.brand_car }}">&nbsp;{{ el.brand_car }}&nbsp;</a>
+            </li>
+        </ul>
+
+        {% endfor %}
+
+    </div>
+{% endblock header %}
