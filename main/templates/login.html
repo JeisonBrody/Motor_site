@@ -1,0 +1,38 @@
+{% extends 'side.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      {% block link %}
+    <link rel="stylesheet" href="{% static 'main/css/login.css' %}">
+      {% endblock link %}
+    <title>Login</title>
+  </head>
+  <body>
+  {% block header %}
+    <div class="main-login">
+      <div class="left-login">
+        <img src="{% static 'main/images/car.png' %}" class="left-login-image" alt="programa">
+      </div>
+      <div class="right-login">
+        <div class="card-login">
+          <h1>LOGIN</h1>
+          <div class="textfild">
+            <label for="usuario">Login</label>
+            <input type="text" name="usuario" placeholder="Login in">
+          </div>
+          <div class="textfild">
+            <label for="senha">Password</label>
+            <input type="password" name="senha" placeholder="Password">
+          </div>
+          <button class="btn-login">login</button>
+        </div>
+      </div>
+    </div>
+  {% endblock header %}
+  </body>
+</html>
